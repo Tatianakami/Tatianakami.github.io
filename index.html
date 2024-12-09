@@ -1,67 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>StarBucks Website landing Page</title>
-    <link href="style.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-widht, initial-scale=1.0, maximum-scale=1.0" />  
-</head>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatiana Kami</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="caixa-principal" id="home">
+      <nav>
+        <h2 class="portfolio">Portfo<span>lio</span></h2>
+        <ul>
+          <li><a class="link-menu" href="#home">Home</a></li>
+          <li><a class="link-menu" href="#sobre">Sobre</a></li>
+          <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
+          <li><a class="link-menu" href="#vamos conversar!">Vamos Conversar!</a></li>
+        </ul>
+      </nav>
+      <div class="meu-nome">
+        <h1>Tatiana Kami</h1>
+        <h3><span>Developer Front-End</span></h3>
+      </div>
+    </div>
 
+    <section id="sobre">
+      <img src="./image/fotoim.png" alt="#" />
+      <div>
+        <h2>Sobre Mim</h2>
+        <p>
+          Sou desenvolvedora front-end em transição de carreira em transição de
+          carreira. Com formação em Engenharia de Produção e pós-graduações em
+          Análise e Desenvolvimento de Sistemas e Segurança da Informação, trago
+          uma sólida combinação de conhecimentos técnicos e visão estratégica.
+        </p>
+        <button onclick="abrirCurriculo()">Vamos Conversar!</button>
 
-
-    <body>
-       <section>
-        <div class="circle"></div>
-        <header>
-            <a herf="#"><img src="imagens/logo.png" class="logo" alt="#"></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">What's New</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </header>
-        <div class="content">
-            <div class="textBox">
-                <h2>It's not just Coffee<br>It's<span> Starbucks</span></h2>
-                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-                <a href="#">Learn More</a>
-                </div>
-                <div class="imgBox">
-                    <img src="imagens/img1.png" alt="#" class="starbucks">
-                </div>
-                </div>
-                
-            <ul class="thumb">
-                <ul>
-                    <li><img src="imagens/thumb1.png" onclick="imgSlider('./imagens/thumb1.png'); changeCircleColor('#017143')"></li>
-                    <li><img src="imagens/thumb2.png" onclick="imgSlider('./imagens/thumb2.png'); changeCircleColor('#eb7495')"></li>
-                    <li><img src="imagens/thumb3.png" onclick="imgSlider('./imagens/thumb3.png'); changeCircleColor('#d752b1')"></li>
-                </ul>
-                
-            </ul>
         
-            <ul class="sci">
-                <li><a href="#"><img src="imagens/facebook.png" alt="#"></a></li>
-                <li><a href="#"><img src="imagens/instagram.png" alt="#"></a></li>
-                <li><a href="#"><img src="imagens/twitter.png"alt="#"></a></li>
-            </ul>
-        </section>
+        <div id="contato" style="display:none;">
+          <p>Contato: <a href="mailto:tatianakamioka@gmail.com">tatianakamioka@gmail.com</a></p>
+        </div>
+
+        <a href="curriculo/tatiana_lk.pdf" target="_blank" class="botao">Visualizar Currículo</a>
+      </div>
+    </section>
+
+   
+    <div class="projetos" id="projetos-id">
+      <h2>Principais Projetos</h2>
+
+      <div class="card-projetos">
+        <div class="card">
+          <img src="./image/logo.png" alt="logo" />
+          <h5>Starbucks</h5>
+          <p>
+            O Starbucks Clone é um projeto simples e interativo desenvolvido com
+            HTML, CSS e JavaScript. Ele recria a interface visual do site da
+            Starbucks com foco nos copos de café como elemento principal.
+          </p>
+          <a href="https://github.com/Tatianakami/clone-starbucks" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="card">
+          <img src="./image/Pokeball-PNG-Image.png" alt="logo" />
+          <h5>Pokedex</h5>
+          <p>
+            O App Pokédex é um aplicativo para consulta de pokémons, desenvolvido com
+            HTML, CSS e JavaScript. O objetivo principal deste projeto é aprofundar o
+            conhecimento nas bases de JS.
+          </p>
+          <a href="https://github.com/Tatianakami?tab=repositories" target="_blank">Ver Projeto</a>
+        </div>
         
-        <script type="text/javascript">
-            function imgSlider(anything){
-                document.querySelector('.starbucks').src = anything
-            }
-            function changeCircleColor(color){
-                const circle = document.querySelector('.circle');
-                circle.style.background = color;
-            }
-        </script>
-    </body>
+        <div class="card">
+          <img src="./image/relogio.jpeg" alt="logo" />
+          <h5>Relogio</h5>
+          <p>
+            O Relógio Digital Simples é um projeto de Front-end que exibe a hora
+            atual em um formato digital de 24 horas. Desenvolvido com HTML, CSS
+            e JavaScript, o relógio atualiza automaticamente em tempo real,
+            oferecendo uma interface limpa e funcional. 
+          </p>
+          <a href="https://github.com/Tatianakami?tab=repositories" target="_blank">Ver Projeto</a>
+        </div>
+        
+       
+      </div>
+    </div>
 
-</html>      
+    <footer id="fale-comigo">
+      <h5>Tatiana Kami</h5>
+      <p>Para mais informações</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/tatiana-k-lima/">
+          <img src="./image/linkedin.png" alt="#" />
+        </a>
+        <a href="mailto:tatianakamioka@gmail.com">
+          <img src="./image/o-email.png" alt="#" />
+        </a>
+      </div>
+    </footer>
 
-
-  
-    
+    <script>
+      function abrirCurriculo() {
+        const contato = document.getElementById('contato');
+        if (contato) {
+          contato.style.display = 'block'; 
+        }
+      }
+    </script>
+  </body>
+</html>
