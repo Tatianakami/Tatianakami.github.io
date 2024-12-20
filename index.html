@@ -5,23 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tatiana Kami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="caixa-principal" id="home">
       <nav>
         <h2 class="portfolio">Portfo<span>lio</span></h2>
         <ul>
-          <li><a class="link-menu" href="#home">Home</a></li>
-          <li><a class="link-menu" href="#sobre">Sobre</a></li>
-          <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
-          <li><a class="link-menu" href="#vamos conversar!">Vamos Conversar!</a></li>
+          <span class="mao-animada">👉</span>
+          <li><a class="link-menu" href="#home" onclick="abrirModal('home-modal')">Home</a></li>
+          <li><a class="link-menu" href="#sobre" onclick="abrirModal('sobre-modal')">Sobre</a></li>
+          <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
+          <li><a class="link-menu" href="#contato" onclick="abrirModal('contato-modal')">Vamos Conversar!</a></li>
         </ul>
       </nav>
-      <div class="meu-nome">
-        <h1>Tatiana Kami</h1>
-        <h3><span>Developer Front-End</span></h3>
-      </div>
+    </div>
+
+        <!-- Modal para "Home" -->
+        <div id="home-modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="fecharModal('home-modal')">&times;</span>
+            <p>Mergulhe no meu mundo</p>
+          </div>
+        </div>
+
+        <!-- Modal para "Sobre" -->
+  <div id="sobre-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('sobre-modal')">&times;</span>
+      <p>Apaixonada por tecnologia, particularmente desenvolvimento Front-End, e atualmente em transição de carreira.</p>
+    </div>
+  </div>
+</div> 
+     <!-- Modal para "Vamos Conversar" -->
+      <div id="contato-modal" class="modal">
+        <div class="modal-content">
+         <span class="close" onclick="fecharModal('contato-modal')">&times;</span>
+        <p>Entre em contato comigo:</p>
+         <p><strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/tatiana-k-lima/" target="_blank">https://www.linkedin.com/in/tatiana-k-lima/</a>
+    </p>
+  </div>
+</div>
+
+    <div class="meu-nome">
+          
+            
+         </div>
+             <div class="bubbles-container">
+             <div class="bubble"></div>
+             <div class="bubble"></div>
+             <div class="bubble"></div>
+             <div class="bubble"></div>
+             <div class="bubble"></div>
+         </div>
+         
     </div>
 
     <section id="sobre">
@@ -34,17 +74,58 @@
           Análise e Desenvolvimento de Sistemas e Segurança da Informação, trago
           uma sólida combinação de conhecimentos técnicos e visão estratégica.
         </p>
-        <button onclick="abrirCurriculo()">Vamos Conversar!</button>
-
         
-        <div id="contato" style="display:none;">
-          <p>Contato: <a href="mailto:tatianakamioka@gmail.com">tatianakamioka@gmail.com</a></p>
-        </div>
+    
+     <div class="botoes-container">
+      <button class="botao" onclick="mostrarEmail()">Vamos Conversar!</button>
+      <button class="botao" id="openModal">Visualizar Currículo</button>
+      <a href="https://github.com/Tatianakami" target="_blank" class="github-btn">GitHub</a>
+    </div>
 
-        <a href="./assets/curriculo/CV_TatianaLK (1).pdf" target="_blank" class="botao">Visualizar Currículo</a>
-      </div>
-    </section>
-
+      <div id="contato" style="display: none;">
+              <p>Contato: <a href="mailto:tatianakamioka@gmail.com">tatianakamioka@gmail.com</a></p>
+             </div>
+           </div>
+           </div>
+      </section>
+ 
+ <div class="modal" id="curriculoModal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Tatiana Kami</h2>
+    <hr />
+    <p><strong>Desenvolvedora Front-End / Suporte Técnico</strong></p>
+    <p>
+      Sou uma Desenvolvedora Front-End em formação contínua, com conhecimentos em Javascript, HTML, CSS, React, Vue.js, Typescript. Possuo experiência com atendimento ao cliente em diversos segmentos. Atualmente em transição de carreira para a área de tecnologia.
+    </p>
+    <hr />
+    
+    <h3>Educação</h3>
+    <ul>
+      <li>Pós-graduação em Segurança da Informação – UNIDERP (2023-2024)</li>
+      <li>Pós-graduação em Análise e Desenvolvimento de Sistemas – UNIDERP (2023-2024)</li>
+      <li>Bacharelado em Engenharia de Produção – UNIABC (2015-2019)</li>
+    </ul>
+    <hr />
+    
+    <h3>Experiência Profissional</h3>
+    <ul>
+      <li>Analista de Suporte Técnico – Konecta (2017-2020)</li>
+      <li>Analista de Logística – Ivalis Logística e Estoque Ltda. (2020-2021)</li>
+      <li>Analista Financeiro – Grupo TAFF Transportes Rodoviários (2021-2023)</li>
+    </ul>
+    <hr />
+    
+    <h3>Habilidades</h3>
+    <ul>
+      <li>Javascript, HTML, CSS, React, Vue.js</li>
+      <li>Métodos Ágeis e Cibersegurança</li>
+      <li>Inteligência Emocional, Adaptabilidade</li>
+    </ul>
+    <a href="./assets/curriculo/CV_TatianaLK (1).pdf" target="_blank" class="botao">Visualizar Currículo em PDF</a>
+  </div>
+  
+</div>
    
     <div class="projetos" id="projetos-id">
       <h2>Principais Projetos</h2>
@@ -58,7 +139,7 @@
             HTML, CSS e JavaScript. Ele recria a interface visual do site da
             Starbucks com foco nos copos de café como elemento principal.
           </p>
-          <a href="tatianakami.github.io/clone-starbucks/" target="_blank">Ver Projeto</a>
+          <a href="https://tatianakami.github.io/clone-starbucks/" target="_blank">Ver Projeto</a>
         </div>
 
         <div class="card">
@@ -100,14 +181,55 @@
         </a>
       </div>
     </footer>
-
+   
     <script>
-      function abrirCurriculo() {
-        const contato = document.getElementById('contato');
-        if (contato) {
-          contato.style.display = 'block'; 
+      const modal = document.getElementById('curriculoModal');
+      const btn = document.getElementById('openModal');
+      const span = document.getElementById('closeModal');
+      
+      
+      function mostrarEmail() {
+        const contato = document.getElementById("contato");
+        if (contato.style.display === "none" || contato.style.display === "") {
+          contato.style.display = "block";
+        } else {
+          contato.style.display = "none";
         }
       }
+
+      btn.onclick = function() {
+        modal.style.display = 'block';
+      };
+
+      
+      span.onclick = function() {
+        modal.style.display = 'none';
+      };
+
+      
+      window.onclick = function(event) {
+    if(event.target == modal) {
+        modal.style.display = 'none';
+    }
+};
+
+        function abrirModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function fecharModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // Fechar modal ao clicar fora dele
+    window.onclick = function(event) {
+      const modals = document.getElementsByClassName('modal');
+      Array.from(modals).forEach((modal) => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
     </script>
   </body>
 </html>
