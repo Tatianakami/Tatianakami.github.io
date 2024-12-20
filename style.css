@@ -23,8 +23,9 @@ header {
   height: 100vh;
   width: 100%;
   background-image: url(./assets/image/Logo_TK.png);
-  background-size: cover;
-  
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
@@ -268,8 +269,23 @@ cursor: default; /* Define cursor padrão */
 }
 .projetos h2 {
   color: wheat;
-  font-size: 45px;
+  font-size: 2.5rem; /* Ajuste relativo ao tamanho base */;
+  margin: 20px auto; 
+  line-height: 1.2; 
   text-align: center;
+}
+@media (max-width: 768px) {
+  .projetos h2 {
+    font-size: 2rem; /* Reduz o tamanho em telas menores */
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos h2 {
+    font-size: 1.5rem; /* Mais compacto para telas muito pequenas */
+    margin: 10px auto;
+  }
 }
 .card {
   background-color: #000000;
@@ -592,12 +608,19 @@ footer .social {
   margin-right: 8px;
 }
 .mao-animada {
+  position: ab;
   display: inline-block;
-  margin-right: 15px; 
-  font-size: 18px; 
+  margin-right: 5px; 
+  font-size: 1.5rem; 
   padding: 10px;
   animation: apontar-direita 1s infinite; 
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mao-animada {
+    font-size: 1.2rem;
+  }
 }
 
 @keyframes apontar-direita {
@@ -625,6 +648,16 @@ footer .social {
   nav ul {
     flex-direction: column;
     gap: 10px;
+    display: flex;
+    align-items: center; /* Garante alinhamento vertical */
+    padding: 0;
+  }
+  nav li {
+    list-style: none;
+    font-size: 18px; 
+    color: wheat;
+    display: flex; /* Torna o item flexível */
+    align-items: center; /* Alinha a mãozinha com o texto */
   }
 
   .portfolio {
