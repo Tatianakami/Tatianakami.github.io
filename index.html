@@ -15,7 +15,6 @@
         <h2 class="portfolio">Portfo<span>lio</span></h2>
         <ul>
           
-          <span id="maoAnimada" class="mao-animada">👉</span>
           <li><a class="link-menu" href="#home" onclick="abrirModal('home-modal')">Home</a></li>
           <li><a class="link-menu" href="#sobre" onclick="abrirModal('sobre-modal')">Sobre</a></li>
           <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
@@ -232,25 +231,6 @@
         }
       });
     };
-    document.addEventListener("DOMContentLoaded", function () {
-  const maoAnimada = document.getElementById("maoAnimada");
-  const linksMenu = document.querySelectorAll("nav ul li a"); // Seleciona os links no menu
-
-  linksMenu.forEach((link) => {
-    link.addEventListener("click", () => {
-      const li = link.parentElement; // Obtém o elemento <li> do link
-      const liRect = li.getBoundingClientRect(); // Obtém as dimensões do <li>
-      const navRect = li.parentElement.getBoundingClientRect(); // Obtém as dimensões do menu
-
-      // Calcula a posição relativa ao menu
-      const maoTop = liRect.top - navRect.top;
-
-      // Move a mãozinha
-      maoAnimada.style.top = `${maoTop}px`;
-    });
-  });
-});
-
-</script>
+   </script>
   </body>
 </html>
