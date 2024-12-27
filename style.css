@@ -7,10 +7,15 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #110b0b;
-  background: linear-gradient(to right,  #110b0b, 80%, #191919 80%, #191919 80%, #110b0b 80%);
+  background-color: #110b0b; /* Fundo padrão */
+  background: linear-gradient(to right, #110b0b, #191919); /* Gradiente para telas grandes */
 }
 
+@media (max-width: 768px) {
+  html, body {
+    background-color: #191919; /* Fundo sólido para telas pequenas */
+  }
+}
 body {
   background-color: #191919;
   box-sizing: border-box;
