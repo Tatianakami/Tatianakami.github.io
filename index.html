@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tatiana Kami</title>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -13,15 +14,26 @@
     <div class="caixa-principal" id="home">
       <nav>
         <h2 class="portfolio">Portfo<span>lio</span></h2>
-        <ul>
-          
-          <li><a class="link-menu" href="#home" onclick="abrirModal('home-modal')">Home</a></li>
-          <li><a class="link-menu" href="#sobre" onclick="abrirModal('sobre-modal')">Sobre</a></li>
-          <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
-          <li><a class="link-menu" href="#contato" onclick="abrirModal('contato-modal')">Vamos Conversar!</a></li>
-        
-        </ul>
+        <button class="btn-menu" onclick="abrirMenu()">☰ Menu</button>
       </nav>
+    </div>
+    
+    <div class="menu-lateral">
+     <div id="menuLateral" class="menu-lateral-conteudo">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+      <ul>
+        <li><a class="link-menu" href="#home" onclick="abrirModal('home-modal')">Home</a></li>
+        <li><a class="link-menu" href="#sobre" onclick="abrirModal('sobre-modal')">Sobre</a></li>
+        <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
+        <li><a class="link-menu" href="#contato" onclick="abrirModal('contato-modal')">Vamos Conversar!</a></li>
+      </ul>
+    </div>
+      </nav>
+
+    </div>
+    <div class="signature-container">
+      <div class="signature">Tatiana Kami</div>
+      <div class="developer-text">Desenvolvedora Front-End</div>
     </div>
 
         <!-- Modal para "Home" -->
@@ -184,11 +196,22 @@
     </footer>
    
     <script>
+      // Função para abrir o menu lateral
+      function abrirMenu() {
+        document.getElementById("menuLateral").style.width = "250px";
+      }
+    
+      // Função para fechar o menu lateral
+      function fecharMenu() {
+        document.getElementById("menuLateral").style.width = "0";
+      }
+    
+      // Código para modais
       const modal = document.getElementById('curriculoModal');
       const btn = document.getElementById('openModal');
       const span = document.getElementById('closeModal');
-      
-      
+    
+      // Função para mostrar/ocultar email
       function mostrarEmail() {
         const contato = document.getElementById("contato");
         if (contato.style.display === "none" || contato.style.display === "") {
@@ -197,40 +220,56 @@
           contato.style.display = "none";
         }
       }
-
-      btn.onclick = function() {
+    
+      // Abrir o modal do currículo
+      btn.onclick = function () {
         modal.style.display = 'block';
       };
-
-      
-      span.onclick = function() {
+    
+      // Fechar o modal do currículo
+      span.onclick = function () {
         modal.style.display = 'none';
       };
-
-      
-      window.onclick = function(event) {
-    if(event.target == modal) {
-        modal.style.display = 'none';
-    }
-};
-
-        function abrirModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
-
-    function fecharModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-
-    // Fechar modal ao clicar fora dele
-    window.onclick = function(event) {
-      const modals = document.getElementsByClassName('modal');
-      Array.from(modals).forEach((modal) => {
+    
+      // Fechar modal ao clicar fora dele
+      window.onclick = function (event) {
         if (event.target == modal) {
-          modal.style.display = "none";
+          modal.style.display = 'none';
         }
-      });
-    };
-   </script>
-  </body>
-</html>
+    
+        const modals = document.getElementsByClassName('modal');
+        Array.from(modals).forEach((modal) => {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        });
+      };
+    
+      // Função para abrir modais gerais
+      function abrirModal(id) {
+        document.getElementById(id).style.display = "block";
+      }
+    
+      // Função para fechar modais gerais
+      function fecharModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+    
+      // Função para alternar a exibição do menu lateral
+      // Seleciona o botão do menu e o menu lateral
+const btnMenu = document.querySelector('.btn-menu');
+const menuLateral = document.querySelector('.menu-lateral-conteudo');
+const closeMenu = document.querySelector('.close-menu');
+
+// Adiciona evento de clique para abrir o menu
+btnMenu.addEventListener('click', () => {
+  menuLateral.classList.toggle('menu-aberto');
+});
+
+// Adiciona evento de clique para fechar o menu
+closeMenu.addEventListener('click', () => {
+  menuLateral.classList.remove('menu-aberto');
+});
+    </script>
+    </body>
+    </html>
