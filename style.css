@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +8,12 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #110b0b; /* Fundo padrão */
-  background: linear-gradient(to right, #110b0b, #191919); /* Gradiente para telas grandes */
+  background-color: #5c5757;
+  background: #191919;
 }
 
-@media (max-width: 768px) {
-  html, body {
-    background-color: #191919; /* Fundo sólido para telas pequenas */
-  }
-}
 body {
-  background-color: #191919;
+  background-color: #1d1d1f; /* Fundo escuro */
   box-sizing: border-box;
   width: 100%;
   margin: 0;
@@ -25,25 +21,31 @@ body {
   font-family: 'Inconsolata', sans-serif;
   line-height: 1.6;
   min-height: 100vh;
+  height: 100vh; /* Garante que o corpo tenha altura completa da tela */
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #333;
   color: white;
   padding: 10px 20px;
-  flex-wrap: wrap;
-  padding-top: 100px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  margin-top: 0;
+  left: 0;
+  right: 0;
 }
 .caixa-principal {
-  height: calc(100vh - 60px); /* Ajusta considerando o header fixo */
+  height: 100vh ; /* Ajusta considerando o header fixo */
   width: 100%;
-  background-image: url(./assets/image/Logo_TK.png);
+  left: 30px;
+  background-image: url(./assets/image/background.png);
   background-size: contain;
-  background-position: center center;
+  background-position: center 125px; /* Ajusta a posição vertical em 120px */
   background-repeat: no-repeat;
   overflow: hidden; 
 }
@@ -55,44 +57,225 @@ header {
     align-items: center;
   }
 }
+/* Botão para abrir o menu */
+.btn-menu {
+  background-color: transparent;
+  border: none;
+  color: rgb(218, 181, 181);
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute; /* Permite controlar o posicionamento */
+  top: 25px; /* Ajusta a posição do botão do menu */
+  right: 20px; /* Ajuste para posicionar no canto direito do header */
+}
+.btn-menu:hover {
+  color: #f39c12;
+}
+
+/* Menu lateral */
+.menu-lateral-conteudo {
+  position: fixed;
+  top: 10px;
+  right: -250px; /* Posição inicial fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: right 0.3s ease;
+}
+
+.menu-lateral-conteudo .close-menu {
+  font-size: 36px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+}
+.menu-lateral-conteudo.menu-aberto {
+  right: 0; /* Quando a classe for adicionada, o menu aparece */
+}
+.menu-lateral-conteudo a {
+  padding: 8px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fcba03;
+  display: block;
+  transition: 0.3s;
+}
+.menu-lateral-conteudo ul {
+  list-style-type: none;
+  padding: 0;
+}
+.menu-lateral-conteudo a:hover {
+  background-color: rgba(252, 186, 3, 0.2);
+}
+.menu-lateral-conteudo ul li {
+  padding: 8px 16px;
+}
+.menu-lateral-conteudo ul li a {
+  color: white;
+  text-decoration: none;
+}
+.close-menu {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
 
 nav li {
+    list-style: none;
+    font-size: 18px; 
+    color: wheat;
     margin-bottom: 15px;
     margin-right: 0; /* Remover margens desnecessárias tela pequena */
 }
 
+/* Cabeçalho */
 nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Espaço entre o título e o botão */
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 25px;
+  padding: 10px 20px;
+  background-color: #111; /* Ajuste para o estilo desejado */
+  color: white;
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  background-color: #444; /* Cor de fundo escura */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease;
+}
 nav ul {
+  list-style: none;
   display: flex;
   flex-wrap: wrap; /*permite se ajustar a telas menores*/
-  gap: 10px;
+  gap: 20px;
   padding: 0;
-  margin-top: 10px; 
+  margin-top: 0px; 
 }
-nav li {
-  list-style: none;
-  font-size: 18px; 
-  color: wheat;
-}
+
 nav li:hover {
   color: aquamarine;
   transition: 0.5s;
 }
 .portfolio {
-  color: grey;
-  font-size: 40px;
-  font-weight: 500;
+  color: rgb(177, 117, 117);
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute; /* Usar absolute para controle preciso da posição */
+  top: 20px; /* Ajuste a posição para o topo */
+  left: 20%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para centralizar */
+  z-index: 1000; /* Garante que o nome fique acima de outros elementos */
 }
 
 .portfolio span {
-  color: greenyellow;
+   color: #fcba03;
+}
+.signature-container {
+  position: absolute; /* Alterado para absoluto */
+  top: 50%; 
+  left: 35%; 
+  transform: translate(-50%, -50%); /* Centraliza o texto */
+  text-align: center; /* Centraliza o conteúdo interno */
+  z-index: 1000; /* Garante que o texto fique acima de outros elementos */
+}
+.signature {
+  font-size: 60px; /* Tamanho do texto do nome */
+  font-family: 'Dancing Script', cursive; 
+  color: rgb(151, 156, 59); /* Cor do texto */
+  margin: 0;
+  font-weight: bold;
+  animation: none; /* Remove qualquer animação */
+}
+
+
+.developer-text {
+  font-size: 27px; /* Tamanho do subtítulo */
+  font-family: 'Dancing Script', cursive; 
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  color: #fcba03; 
+  animation: none; /* Remove qualquer animação */
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .signature {
+    font-size: 60px;
+  }
+
+  .developer-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signature {
+    font-size: 50px;
+  }
+
+  .developer-text {
+    font-size: 18px;
+  }
+}
+.nome-fixo {
+  position: fixed; /* Fixa na tela */
+  top: 10%; /* Distância do topo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para o centro exato */
+  text-align: center;
+  color: white;
+  font-family: 'Inconsolata', sans-serif; /* Fonte personalizada */
+  z-index: 1000; /* Garante que ficará acima de outros elementos */
+}
+
+.nome-fixo h1 {
+  font-size: 3rem; /* Tamanho do nome */
+  margin: 0;
+}
+
+.nome-fixo h3 {
+  font-size: 1.5rem; /* Tamanho do subtítulo */
+  margin: 0;
+  color: #fcba03; /* Amarelo-dourado */
 }
 
 li {
@@ -115,6 +298,7 @@ li:hover {
   cursor: pointer;
 }
 
+
 .meu-nome {
   overflow: hidden;
   white-space: nowrap;
@@ -127,13 +311,13 @@ li:hover {
 }
 
 .meu-nome h1 {
-  font-size: 50px;
+  font-size: 80px;
 }
 .meu-nome h3 {
   font-size: 1rem;
 }
 .meu-nome span {
-  color: gray;
+  color: rgb(195, 100, 100);
 }
 
 h1 {
@@ -150,7 +334,7 @@ section {
   display: flex;
   flex-wrap: wrap; /* Garante que o layout se ajuste */
   align-items: center;
-  padding: 30px 10%;
+  padding: 50px 10%;
   background-color: #000000;
   gap: 20px;
 }
@@ -186,13 +370,13 @@ section div button {
   width: 180px;
   font-size: 19px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 section div button:hover {
   background-color: black;
-  border: 3px solid greenyellow;
+  border: 3px solid rgb(255, 255, 47);
   transition: 0.5s;
 }
 
@@ -203,7 +387,7 @@ section div button:hover {
   width: 180px;
   font-size: 19px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor:default;
   margin-top: 20px;
 }
@@ -212,17 +396,18 @@ section div button:hover {
 }
 button, a {
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 5px 7px;
   margin: 5px;
   text-decoration: none;
-  background-color: #4CAF50;
+  background-color: #a4a87a;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 button:hover, a:hover {
-  background-color: #45a049;
+  background-color: #a4a87a;
+  color: white;
 }
 /*Media query layout responsivo*/
 
@@ -354,7 +539,7 @@ cursor: default; /* Define cursor padrão */
   gap: 20px;
 }
 header, footer {
-  background-color: #333;
+  background-color: #170e0e;
   width: 100%; /* Garante que o cabeçalho e rodapé cubram toda a largura */
   margin: 0;
   padding: 0;
@@ -689,7 +874,7 @@ footer .social {
   }
 
   .portfolio {
-    font-size: 24px;
+    font-size: 34px;
   }
 
   footer h5 {
