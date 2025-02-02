@@ -295,7 +295,7 @@ li:hover {
 .meu-nome {
   overflow: hidden;
   white-space: nowrap;
-  width: 100%; /* Ajuste conforme necessário */
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
