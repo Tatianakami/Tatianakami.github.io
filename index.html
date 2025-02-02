@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de Tatiana Kami, Desenvolvedora Front-End com experiência em HTML, CSS, JavaScript, React e Vue.js.">
+    <meta name="keywords" content="Desenvolvedora Front-End, Portfólio, HTML, CSS, JavaScript, React, Vue.js">
     <title>Tatiana Kami</title>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -13,21 +15,23 @@
   <body>
     <div class="caixa-principal" id="home">
       <nav>
-        <h2 class="portfolio">Portfo<span>lio</span></h2>
-        <button class="btn-menu" onclick="abrirMenu()">☰ Menu</button>
+        <h2 class="portfolio">Portfó<span>lio</span></h2>
+        <button class="btn-menu" onclick="abrirMenu()" aria-label="Abrir menu">☰ Menu</button>
       </nav>
     </div>
     
     <div class="menu-lateral">
-     <div id="menuLateral" class="menu-lateral-conteudo">
-        <span class="close-menu" onclick="toggleMenu()">&times;</span>
-      <ul>
-        <li><a class="link-menu" href="#home" onclick="abrirModal('home-modal')">Home</a></li>
-        <li><a class="link-menu" href="#sobre" onclick="abrirModal('sobre-modal')">Sobre</a></li>
-        <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
-        <li><a class="link-menu" href="#contato" onclick="abrirModal('contato-modal')">Vamos Conversar!</a></li>
-      </ul>
-    </div>
+      <div class="menu-lateral">
+        <div id="menuLateral" class="menu-lateral-conteudo">
+          <span class="close-menu" onclick="fecharMenu()">&times;</span>
+          <ul>
+            <li><a class="link-menu" href="#home" onclick="fecharMenu()">Home</a></li>
+            <li><a class="link-menu" href="#sobre" onclick="fecharMenu()">Sobre</a></li>
+            <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
+            <li><a class="link-menu" href="#contato" onclick="fecharMenu()">Vamos Conversar!</a></li>
+          </ul>
+        </div>
+      </div>
       </nav>
 
     </div>
@@ -77,65 +81,51 @@
          
     </div>
 
-    <section id="sobre">
-      <img src="./assets/image/fotoim.png" alt="#" />
-      <div>
-        <h2>Sobre Mim</h2>
-        <p>
-          Sou desenvolvedora front-end em transição de carreira em transição de
-          carreira. Com formação em Engenharia de Produção e pós-graduações em
-          Análise e Desenvolvimento de Sistemas e Segurança da Informação, trago
-          uma sólida combinação de conhecimentos técnicos e visão estratégica.
-        </p>
         
     
+     <!-- Botão para Visualizar Currículo -->
      <div class="botoes-container">
       <button class="botao" onclick="mostrarEmail()">Vamos Conversar!</button>
-      <button class="botao" id="openModal">Visualizar Currículo</button>
+      <a href="./assets/curriculo/CV_TatianaLK (1).pdf" target="_blank" class="botao">Visualizar Currículo</a>
       <a href="https://github.com/Tatianakami" target="_blank" class="github-btn">GitHub</a>
     </div>
 
-      <div id="contato" style="display: none;">
-              <p>Contato: <a href="mailto:tatianakamioka@gmail.com">tatianakamioka@gmail.com</a></p>
-             </div>
-           </div>
-           </div>
-      </section>
+         <!-- Contato (email) -->
+    <div id="contato" style="display: none;">
+      <p>Contato: <a href="mailto:tatianakamioka@gmail.com">tatianakamioka@gmail.com</a></p>
+    </div>
+  </div>
+</section>
  
- <div class="modal" id="curriculoModal">
-  <div class="modal-content">
-    <span class="close" id="closeModal">&times;</span>
-    <h2>Tatiana Kami</h2>
-    <hr />
-    <p><strong>Desenvolvedora Front-End / Suporte Técnico</strong></p>
-    <p>
-      Sou uma Desenvolvedora Front-End em formação contínua, com conhecimentos em Javascript, HTML, CSS, React, Vue.js, Typescript. Possuo experiência com atendimento ao cliente em diversos segmentos. Atualmente em transição de carreira para a área de tecnologia.
-    </p>
-    <hr />
+      <section id="sobre">
+        <img src="./assets/image/perfil2-removebg-preview.png" alt="Foto de Tatiana Kami" />
+        <div>
+          <h2>Sobre Mim</h2>
+          <p>
+            Sou uma Desenvolvedora Front-End em transição de carreira, apaixonada por tecnologia e inovação. Com formação em Engenharia de Produção e pós-graduações em Análise e Desenvolvimento de Sistemas e Segurança da Informação, trago uma combinação única de habilidades técnicas e visão estratégica.</p>
+          <p>
+            Minha jornada na área de tecnologia começou com a busca por novos desafios, onde encontrei no desenvolvimento Front-End uma paixão por criar interfaces intuitivas e funcionais. Tenho experiência com HTML, CSS, JavaScript, React e Vue.js, além de conhecimentos em TypeScript e metodologias ágeis.
+          </p>
+          <p>
+            Minha trajetória profissional inclui passagens como Analista de Suporte Técnico, Logística e Financeiro, onde desenvolvi habilidades como resolução de problemas, trabalho em equipe e adaptabilidade. Essas experiências me permitiram entender as necessidades dos usuários e entregar soluções que agregam valor.
+          </p>
+          <p>
+            Atualmente, estou focada em aprimorar minhas habilidades como Desenvolvedora Front-End e contribuir para projetos inovadores que impactem positivamente a vida das pessoas. Estou sempre em busca de novos aprendizados e desafios para crescer na área de tecnologia.
+          </p>
     
-    <h3>Educação</h3>
-    <ul>
-      <li>Pós-graduação em Segurança da Informação – UNIDERP (2023-2024)</li>
-      <li>Pós-graduação em Análise e Desenvolvimento de Sistemas – UNIDERP (2023-2024)</li>
-      <li>Bacharelado em Engenharia de Produção – UNIABC (2015-2019)</li>
-    </ul>
-    <hr />
     
-    <h3>Experiência Profissional</h3>
-    <ul>
-      <li>Analista de Suporte Técnico – Konecta (2017-2020)</li>
-      <li>Analista de Logística – Ivalis Logística e Estoque Ltda. (2020-2021)</li>
-      <li>Analista Financeiro – Grupo TAFF Transportes Rodoviários (2021-2023)</li>
-    </ul>
-    <hr />
+     <!-- Lista de Habilidades -->
+     <div class="habilidades">
+      <h3>Habilidades Técnicas:</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Vue.js, TypeScript</li>
+        <li>Metodologias Ágeis (Scrum, Kanban)</li>
+        <li>Ferramentas de Controle de Versão (Git)</li>
+        <li>Design Responsivo e Acessibilidade</li>
+      </ul>
+    </div>
     
-    <h3>Habilidades</h3>
-    <ul>
-      <li>Javascript, HTML, CSS, React, Vue.js</li>
-      <li>Métodos Ágeis e Cibersegurança</li>
-      <li>Inteligência Emocional, Adaptabilidade</li>
-    </ul>
-    <a href="./assets/curriculo/CV_TatianaLK (1).pdf" target="_blank" class="botao">Visualizar Currículo em PDF</a>
   </div>
   
 </div>
@@ -167,15 +157,13 @@
         </div>
         
         <div class="card">
-          <img src="./assets/image/relogio.jpeg" alt="logo" />
-          <h5>Relogio</h5>
+          <img src="./assets/image/pr-image-3t.png" alt="logo" />
+          <h5>Buscador De CEP</h5>
           <p>
-            O Relógio Digital Simples é um projeto de Front-end que exibe a hora
-            atual em um formato digital de 24 horas. Desenvolvido com HTML, CSS
-            e JavaScript, o relógio atualiza automaticamente em tempo real,
-            oferecendo uma interface limpa e funcional. 
+            Buscador de CEP é um projeto simples desenvolvido em React.js que permite a busca de endereços completos a partir do CEP (Código de Endereçamento Postal) no Brasil. 
+            Este projeto foi desenvolvido para melhorar as habilidades em React e foi hospedado no GitHub Pages para fácil acesso. 
           </p>
-          <a href="https://tatianakami.github.io/relogio-digital/" target="_blank">Ver Projeto</a>
+          <a href="https://tatianakami.github.io/buscador-cep/" target="_blank">Ver Projeto</a>
         </div>
         
        
@@ -196,80 +184,70 @@
     </footer>
    
     <script>
-      // Função para abrir o menu lateral
-      function abrirMenu() {
-        document.getElementById("menuLateral").style.width = "250px";
-      }
-    
-      // Função para fechar o menu lateral
-      function fecharMenu() {
-        document.getElementById("menuLateral").style.width = "0";
-      }
-    
-      // Código para modais
-      const modal = document.getElementById('curriculoModal');
-      const btn = document.getElementById('openModal');
-      const span = document.getElementById('closeModal');
-    
-      // Função para mostrar/ocultar email
-      function mostrarEmail() {
-        const contato = document.getElementById("contato");
-        if (contato.style.display === "none" || contato.style.display === "") {
-          contato.style.display = "block";
-        } else {
-          contato.style.display = "none";
-        }
-      }
-    
-      // Abrir o modal do currículo
-      btn.onclick = function () {
-        modal.style.display = 'block';
-      };
-    
-      // Fechar o modal do currículo
-      span.onclick = function () {
-        modal.style.display = 'none';
-      };
-    
-      // Fechar modal ao clicar fora dele
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = 'none';
-        }
-    
-        const modals = document.getElementsByClassName('modal');
-        Array.from(modals).forEach((modal) => {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        });
-      };
-    
-      // Função para abrir modais gerais
-      function abrirModal(id) {
-        document.getElementById(id).style.display = "block";
-      }
-    
-      // Função para fechar modais gerais
-      function fecharModal(id) {
-        document.getElementById(id).style.display = "none";
-      }
-    
-      // Função para alternar a exibição do menu lateral
-      // Seleciona o botão do menu e o menu lateral
-const btnMenu = document.querySelector('.btn-menu');
-const menuLateral = document.querySelector('.menu-lateral-conteudo');
-const closeMenu = document.querySelector('.close-menu');
+     // Função para abrir o menu lateral
+function abrirMenu() {
+  document.getElementById("menuLateral").classList.add("menu-aberto");
+}
 
-// Adiciona evento de clique para abrir o menu
-btnMenu.addEventListener('click', () => {
-  menuLateral.classList.toggle('menu-aberto');
+// Função para fechar o menu lateral
+function fecharMenu() {
+  document.getElementById("menuLateral").classList.remove("menu-aberto");
+}
+
+// Fechar o menu ao clicar fora dele
+window.addEventListener("click", function (event) {
+  const menuLateral = document.getElementById("menuLateral");
+  const btnMenu = document.querySelector(".btn-menu");
+
+  if (event.target !== btnMenu && !menuLateral.contains(event.target)) {
+    fecharMenu();
+  }
 });
 
-// Adiciona evento de clique para fechar o menu
-closeMenu.addEventListener('click', () => {
-  menuLateral.classList.remove('menu-aberto');
+// Função para mostrar/ocultar o email de contato
+function mostrarEmail() {
+  const contato = document.getElementById("contato");
+  if (contato.style.display === "none" || contato.style.display === "") {
+    contato.style.display = "block";
+  } else {
+    contato.style.display = "none";
+  }
+}
+
+// Função para abrir modais
+function abrirModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+// Função para fechar modais
+function fecharModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+// Fechar modais ao clicar fora deles
+window.addEventListener("click", function (event) {
+  const modals = document.getElementsByClassName("modal");
+  Array.from(modals).forEach((modal) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
 });
+
+// Configuração do modal do currículo
+const curriculoModal = document.getElementById("curriculoModal");
+const openModalBtn = document.getElementById("openModal");
+const closeModalBtn = document.getElementById("closeModal");
+
+// Abrir o modal do currículo
+openModalBtn.onclick = function () {
+  curriculoModal.style.display = "block";
+};
+
+// Fechar o modal do currículo
+closeModalBtn.onclick = function () {
+  curriculoModal.style.display = "none";
+};
     </script>
     </body>
     </html>
