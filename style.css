@@ -13,15 +13,10 @@ html, body {
 }
 
 body {
-  background-color: #1d1d1f; /* Fundo escuro */
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0;
-  margin-top: 100px;
+  background-color: #1d1d1f; 
   font-family: 'Inconsolata', sans-serif;
-  line-height: 1.6;
+  line-height: 1.4; /* Reduzindo o espaçamento entre as linhas */
   min-height: 100vh;
-  height: 100vh; /* Garante que o corpo tenha altura completa da tela */
 }
 
 header {
@@ -75,12 +70,13 @@ header {
 /* Menu lateral */
 .menu-lateral-conteudo {
   position: fixed;
-  top: 10px;
+  top: 0;
   right: -250px; /* Posição inicial fora da tela */
   width: 250px;
   height: 100%;
   background-color: #333;
-  transition: right 0.3s ease;
+  transition: right 0.3s ease; /* Adiciona transição suave */
+  z-index: 1000; /* Garante que o menu fique acima de outros elementos */
 }
 
 .menu-lateral-conteudo .close-menu {
@@ -92,7 +88,7 @@ header {
   cursor: pointer;
 }
 .menu-lateral-conteudo.menu-aberto {
-  right: 0; /* Quando a classe for adicionada, o menu aparece */
+  right: 0; /* Mostra o menu ao adicionar a classe */
 }
 .menu-lateral-conteudo a {
   padding: 8px 30px;
@@ -119,7 +115,7 @@ header {
 .close-menu {
   position: absolute;
   top: 10px;
-  right: 25px;
+  right: 20px;
   font-size: 30px;
   cursor: pointer;
   color: white;
@@ -188,23 +184,20 @@ nav li:hover {
   z-index: 1000; /* Garante que o texto fique acima de outros elementos */
 }
 .signature {
-  font-size: 60px; /* Tamanho do texto do nome */
-  font-family: 'Dancing Script', cursive; 
-  color: rgb(151, 156, 59); /* Cor do texto */
+  font-size: 60px;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(151, 156, 59);
   margin: 0;
-  font-weight: bold;
-  animation: none; /* Remove qualquer animação */
 }
 
-
 .developer-text {
-  font-size: 27px; /* Tamanho do subtítulo */
-  font-family: 'Dancing Script', cursive; 
+  font-size: 27px;
+  font-family: 'Dancing Script', cursive;
   font-weight: 400;
   letter-spacing: 2px;
-  margin-top: 10px;
-  color: #fcba03; 
-  animation: none; /* Remove qualquer animação */
+  margin-top: 5px; /* Ajuste do espaçamento */
+  margin-bottom: 0;
+  color: #fcba03;
 }
 
 /* Animações */
@@ -359,8 +352,8 @@ section div h2 {
 section div p {
   color: wheat;
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 60px;
+  margin-top: 5px;  /* Ajusta o espaçamento entre parágrafos */
+  margin-bottom: 20px; /* Reduz o espaçamento inferior */
 }
 
 section div button {
@@ -496,29 +489,34 @@ cursor: default; /* Define cursor padrão */
   }
 }
 .card {
-  background-color: #000000;
-  height: 600px;
-  width: calc(100% - 40px); /* 100% da largura com espaçamento */
-  max-width: 350px;
-  margin: auto;
-  border-radius: 20px;
-  padding: 20px 35px;
-  text-align: center;
+  min-height: 300px; /* Ajuste conforme necessário */
+  display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center; /* Centraliza os elementos dentro do card */
+  padding: 20px;
 }
+
 .card img {
-  height: 100px;
+  max-height: 40px; /* Ajuste o valor conforme o tamanho desejado para o ícone */
+  width: auto; /* Mantém a proporção */
+  object-fit: contain; /* Mantém a imagem proporcional sem distorção */
+  margin-bottom: 10px; /* Espaço entre a imagem e o título */
 }
+
 .card h5 {
   color: wheat;
   font-size: 18px;
+  text-align: center;
 }
+
 .card p {
-  color: wheat;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  min-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
+
 .card a {
   background-color: #5ea27f;
   color: white;
@@ -527,17 +525,29 @@ cursor: default; /* Define cursor padrão */
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
+  border: 2px solid transparent; /* Evita a borda invisível */
 }
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .card a:hover {
   background-color: transparent;
-  border: 2px solid;
+  border: 2px solid #5ea27f;
+  color: #5ea27f;
 }
+
 .card-projetos {
-  display: flex;
-  flex-wrap: wrap; /* Permite múltiplas linhas */
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  justify-content: center;
 }
+
+
+
 header, footer {
   background-color: #170e0e;
   width: 100%; /* Garante que o cabeçalho e rodapé cubram toda a largura */
@@ -573,11 +583,15 @@ footer .social {
   gap: 20px;
   margin-top: 10px;
 }
+
 .social img {
-  height: 20px;
+  height: 30px; /* Tamanho fixo para a altura */
+  width: 30px; /* Tamanho fixo para a largura */
   border-radius: 50%;
-  
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
+
+
 .social a {
   background-color: #252625;
   display: flex;
@@ -589,11 +603,12 @@ footer .social {
   cursor: pointer;
   text-align: center;
 }
+
 .social a:hover {
   transform: scale(1.3);
   transition: 0.5s;
-
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -654,21 +669,19 @@ footer .social {
 .botao {
   background-color: rgb(100, 110, 84);
   color: white;
-  width: 100%; /* Ocupa toda a largura em telas menores */
-  max-width: 300px; /* Limita o tamanho do botão */
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease; /* Adiciona transição suave */
 }
 .botao:hover {
   background-color: black;
   border: 2px solid greenyellow;
   color: greenyellow;
-  transform: scale(1.05);
+  transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 .botoes-container {
   display: flex;
@@ -888,4 +901,69 @@ footer .social {
   .social img {
     height: 16px;
   }
+}
+@media (max-width: 768px) {
+  .caixa-principal {
+    background-position: center 100px; /* Ajuste da posição do background */
+  }
+
+  .signature {
+    font-size: 40px; /* Reduz o tamanho da assinatura */
+  }
+
+  .developer-text {
+    font-size: 20px; /* Reduz o tamanho do subtítulo */
+  }
+
+  section {
+    flex-direction: column; /* Altera o layout para coluna em telas menores */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  section img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+  }
+
+  .card {
+    width: 100%; /* Faz os cards ocuparem a largura total */
+    margin-bottom: 20px; /* Adiciona espaçamento entre os cards */
+  }
+
+  .botoes-container {
+    flex-direction: column; /* Alinha os botões verticalmente */
+    gap: 10px; /* Adiciona espaçamento entre os botões */
+  }
+
+  .botao {
+    width: 100%; /* Faz os botões ocuparem a largura total */
+  }
+}
+.habilidades {
+  margin-top: 20px;
+}
+
+.habilidades h3 {
+  color: #fcba03; /* Cor destacada */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.habilidades ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.habilidades ul li {
+  background-color: #333; /* Fundo escuro */
+  color: wheat;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.habilidades ul li:hover {
+  background-color: #444; /* Efeito hover */
+  transition: background-color 0.3s ease;
 }
