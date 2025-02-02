@@ -18,10 +18,9 @@ Integração com API: Inclui recursos como integração com APIs para informaç�
 
     
 Entre em Contato
+
 Se você tiver dúvidas ou sugestões, não hesite em me contactar!
 
-LinkedIn: linkedin.com/in/tatiana-k-lima
-Email: tatiana.kami@email.com
-
-
+LinkedIn: https://www.linkedin.com/in/tatiana-k-lima/
+Email: tatiana.kamioka@gmail.com
 https://tatianakami.github.io/
