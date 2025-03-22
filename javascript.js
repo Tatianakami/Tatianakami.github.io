@@ -93,4 +93,3 @@ function abrirMenu() {
   document.addEventListener("DOMContentLoaded", () => {
     carregarTema(); // Carrega o tema salvo
   });
-
