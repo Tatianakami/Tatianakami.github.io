@@ -13,241 +13,281 @@
   </head>
 
   <body>
-    <div class="caixa-principal" id="home">
-      <nav>
-        <h2 class="portfolio">Portfó<span>lio</span></h2>
-        <button class="btn-menu" onclick="abrirMenu()" aria-label="Abrir menu">☰ Menu</button>
-      </nav>
-    </div>
-    
-    <div class="menu-lateral">
-      <div class="menu-lateral">
-        <div id="menuLateral" class="menu-lateral-conteudo">
-          <span class="close-menu" onclick="fecharMenu()">&times;</span>
-          <ul>
-            <li><a class="link-menu" href="#home" onclick="fecharMenu()">Home</a></li>
-            <li><a class="link-menu" href="#sobre" onclick="fecharMenu()">Sobre</a></li>
-            <li><a class="link-menu" href="https://github.com/Tatianakami" target="_blank">Projetos</a></li>
-            <li><a class="link-menu" href="#contato" onclick="fecharMenu()">Vamos Conversar!</a></li>
-          </ul>
-        </div>
+    <nav>
+      <h2 class="portfolio">Kami<span>Verse</span></h2>
+      <div class="frase-centralizada">
+        <p class="typing-animation">Explorando o universo do front-end!</p>
       </div>
-      </nav>
-
+      <div class="botoes-nav">
+        <button class="btn-menu" onclick="abrirMenu()" aria-label="Abrir menu">☰ Menu</button>
+        <button class="btn-tema" onclick="alternarTema()">🌙</button>
+      </div>
+    </nav>
     </div>
+
+    <div class="menu-lateral">
+      <div id="menuLateral" class="menu-lateral-conteudo">
+        <span class="close-menu" onclick="fecharMenu()">&times;</span>
+        <ul>
+          <li><a class="link-menu" href="#home" onclick="fecharMenu()">Home</a></li>
+          <li><a class="link-menu" href="#sobre" onclick="fecharMenu()">Sobre</a></li>
+          <li><a class="link-menu" href="#projetos-id" onclick="fecharMenu()">Projetos</a></li>
+          <li><a class="link-menu" href="#fale-comigo" onclick="fecharMenu()">Vamos Conversar!</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="signature-container">
       <div class="signature">Tatiana Kami</div>
       <div class="developer-text">Desenvolvedora Front-End</div>
-    </div>
-
-        <!-- Modal para "Home" -->
-        <div id="home-modal" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="fecharModal('home-modal')">&times;</span>
-            <p>Mergulhe no meu mundo</p>
-          </div>
-        </div>
-
-        <!-- Modal para "Sobre" -->
-  <div id="sobre-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fecharModal('sobre-modal')">&times;</span>
-      <p>Apaixonada por tecnologia, particularmente desenvolvimento Front-End, e atualmente em transição de carreira.</p>
-    </div>
-  </div>
-</div> 
-     <!-- Modal para "Vamos Conversar" -->
-      <div id="contato-modal" class="modal">
-        <div class="modal-content">
-         <span class="close" onclick="fecharModal('contato-modal')">&times;</span>
-        <p>Entre em contato comigo:</p>
-         <p><strong>LinkedIn:</strong> 
-      <a href="https://www.linkedin.com/in/tatiana-k-lima/" target="_blank">https://www.linkedin.com/in/tatiana-k-lima/</a>
-    </p>
-  </div>
-</div>
-
-    <div class="meu-nome">
-          
-            
-         </div>
-             <div class="bubbles-container">
-             <div class="bubble"></div>
-             <div class="bubble"></div>
-             <div class="bubble"></div>
-             <div class="bubble"></div>
-             <div class="bubble"></div>
-         </div>
-         
-    </div>
-
-        
-    
-     <!-- Botão para Visualizar Currículo -->
-     <div class="botoes-container">
-      <button class="botao" onclick="mostrarEmail()">Vamos Conversar!</button>
-      <a href="./assets/curriculo/CV_TatianaLK (1).pdf" target="_blank" class="botao">Visualizar Currículo</a>
-      <a href="https://github.com/Tatianakami" target="_blank" class="github-btn">GitHub</a>
-    </div>
-
-         <!-- Contato (email) -->
-    <div id="contato" style="display: none;">
-      <p>Contato: <a href="mailto:tatianakamioka@gmail.com">tatianakamioka@gmail.com</a></p>
-    </div>
-  </div>
-</section>
- 
-      <section id="sobre">
-        <img src="./assets/image/perfil2-removebg-preview.png" alt="Foto de Tatiana Kami" />
-        <div>
-          <h2>Sobre Mim</h2>
-          <p>
-            Sou uma Desenvolvedora Front-End em transição de carreira, apaixonada por tecnologia e inovação. Com formação em Engenharia de Produção e pós-graduações em Análise e Desenvolvimento de Sistemas e Segurança da Informação, trago uma combinação única de habilidades técnicas e visão estratégica.</p>
-          <p>
-            Minha jornada na área de tecnologia começou com a busca por novos desafios, onde encontrei no desenvolvimento Front-End uma paixão por criar interfaces intuitivas e funcionais. Tenho experiência com HTML, CSS, JavaScript, React e Vue.js, além de conhecimentos em TypeScript e metodologias ágeis.
-          </p>
-          <p>
-            Minha trajetória profissional inclui passagens como Analista de Suporte Técnico, Logística e Financeiro, onde desenvolvi habilidades como resolução de problemas, trabalho em equipe e adaptabilidade. Essas experiências me permitiram entender as necessidades dos usuários e entregar soluções que agregam valor.
-          </p>
-          <p>
-            Atualmente, estou focada em aprimorar minhas habilidades como Desenvolvedora Front-End e contribuir para projetos inovadores que impactem positivamente a vida das pessoas. Estou sempre em busca de novos aprendizados e desafios para crescer na área de tecnologia.
-          </p>
-    
-    
-     <!-- Lista de Habilidades -->
-     <div class="habilidades">
-      <h3>Habilidades Técnicas:</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>React, Vue.js, TypeScript</li>
-        <li>Metodologias Ágeis (Scrum, Kanban)</li>
-        <li>Ferramentas de Controle de Versão (Git)</li>
-        <li>Design Responsivo e Acessibilidade</li>
-      </ul>
-    </div>
-    
   </div>
   
-</div>
-   
-    <div class="projetos" id="projetos-id">
-      <h2>Principais Projetos</h2>
+  <section id="sobre">
+      <img src="./assets/image/perfil2-removebg-preview.png" alt="Foto de Tatiana Kami" class="foto-perfil" />
+    <div>
 
-      <div class="card-projetos">
-        <div class="card">
-          <img src="./assets/image/logo.png" alt="logo" />
-          <h5>Starbucks</h5>
-          <p>
-            O Starbucks Clone é um projeto simples e interativo desenvolvido com
-            HTML, CSS e JavaScript. Ele recria a interface visual do site da
-            Starbucks com foco nos copos de café como elemento principal.
-          </p>
-          <a href="https://tatianakami.github.io/clone-starbucks/" target="_blank">Ver Projeto</a>
-        </div>
-
-        <div class="card">
-          <img src="./assets/image/Pokeball-PNG-Image.png" alt="logo" />
-          <h5>Pokedex</h5>
-          <p>
-            O App Pokédex é um aplicativo para consulta de pokémons, desenvolvido com
-            HTML, CSS e JavaScript. O objetivo principal deste projeto é aprofundar o
-            conhecimento nas bases de JS.
-          </p>
-          <a href="https://tatianakami.github.io/pokedex/" target="_blank">Ver Projeto</a>
-        </div>
-        
-        <div class="card">
-          <img src="./assets/image/pr-image-3t.png" alt="logo" />
-          <h5>Buscador De CEP</h5>
-          <p>
-            Buscador de CEP é um projeto simples desenvolvido em React.js que permite a busca de endereços completos a partir do CEP (Código de Endereçamento Postal) no Brasil. 
-            Este projeto foi desenvolvido para melhorar as habilidades em React e foi hospedado no GitHub Pages para fácil acesso. 
-          </p>
-          <a href="https://tatianakami.github.io/buscador-cep/" target="_blank">Ver Projeto</a>
-        </div>
-        
-       
+     
+      <div>
+        <h2>Sobre Mim</h2>
+        <p>
+          Sou uma <strong>Desenvolvedora Front-End</strong> em transição de carreira, apaixonada por tecnologia e inovação. Com formação em <strong>Engenharia de Produção</strong> e pós-graduações em <strong>Análise e Desenvolvimento de Sistemas</strong> e <strong>Segurança da Informação</strong>, trago uma combinação única de habilidades técnicas e visão estratégica para criar soluções que impactam positivamente os usuários.
+        </p>
+        <p>
+          Minha jornada na área de tecnologia começou com a busca por novos desafios, onde descobri minha paixão por <strong>desenvolvimento Front-End</strong>. Tenho experiência com <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>React.js</strong> e <strong>Vue.js</strong>, além de conhecimentos em <strong>TypeScript</strong> e metodologias ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Estou sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades.
+        </p>
+        <p>
+          Minha trajetória profissional inclui experiências como <strong>Analista de Suporte Técnico</strong>, <strong>Logística</strong> e <strong>Financeiro</strong>, onde desenvolvi habilidades essenciais como <strong>resolução de problemas</strong>, <strong>trabalho em equipe</strong> e <strong>adaptabilidade</strong>. Essas vivências me permitiram entender as necessidades dos usuários e entregar soluções que agregam valor aos negócios.
+        </p>
+        <p>
+          Atualmente, estou focada em aprimorar minhas habilidades como <strong>Desenvolvedora Front-End</strong> e contribuir para projetos inovadores. Meu objetivo é criar interfaces intuitivas, responsivas e acessíveis, que proporcionem uma excelente experiência ao usuário. Estou sempre em busca de novos aprendizados e desafios para crescer na área de tecnologia.
+        </p>
       </div>
+
+      <section id="habilidades">
+        <h2>Habilidades</h2> <!-- Título acima dos cards -->
+        <div class="habilidades-container">
+          <!-- Card 1 -->
+          <div class="habilidades-categoria">
+            <h3>Desenvolvimento Front-End/Web</h3>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>React.js, Vue.js</li>
+              <li>Git e GitHub</li>
+              <li>Design Responsivo</li>
+              <li>Consumo de APIs RESTful</li>
+            </ul>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="habilidades-categoria">
+            <h3>Desenvolvimento Back-End e APIs</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Python (Flask)</li>
+              <li>APIs RESTful</li>
+              <li>Banco de Dados (SQL)</li>
+            </ul>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="habilidades-categoria">
+            <h3>Suporte Técnico</h3>
+            <ul>
+              <li>Windows e Linux</li>
+              <li>Redes (TCP/IP, DNS, DHCP)</li>
+              <li>Hardware e Software</li>
+              <li>Ferramentas de Help Desk (Jira)</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+<div class="projetos" id="projetos-id">
+  <h2>Principais Projetos</h2>
+  <div class="card-projetos">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="./assets/image/logo.png" alt="Starbucks Clone" />
+      <h5>Starbucks</h5>
+      <p>
+        O Starbucks Clone é um projeto simples e interativo desenvolvido com
+        HTML, CSS e JavaScript. Ele recria a interface visual do site da
+        Starbucks com foco nos copos de café como elemento principal.
+      </p>
+      <a href="https://tatianakami.github.io/clone-starbucks/" target="_blank">Ver Projeto</a>
     </div>
 
-    <footer id="fale-comigo">
-      <h5>Tatiana Kami</h5>
-      <p>Para mais informações</p>
-      <div class="social">
-        <a href="linkedin.com/in/tatiana-kami/">
-          <img src="./assets/image/linkedin.png" alt="#" />
-        </a>
-        <a href="mailto:tatianakamioka@gmail.com">
-          <img src="./assets/image/o-email.png" alt="#" />
-        </a>
-      </div>
-    </footer>
-   
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="./assets/image/Pokeball-PNG-Image.png" alt="logo" />
+      <h5>Pokedex</h5>
+      <p>
+        O App Pokédex é um aplicativo para consulta de pokémons, desenvolvido com
+        HTML, CSS e JavaScript. O objetivo principal deste projeto é aprofundar o
+        conhecimento nas bases de JS.
+      </p>
+      <a href="https://tatianakami.github.io/pokedex/" target="_blank">Ver Projeto</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="./assets/image/produtos.png" alt="logo" />
+      <h5>Controle de Produtos</h5>
+      <p>
+        Este é um aplicativo web simples para gerenciar produtos e acompanhar suas validades. O sistema permite adicionar produtos, definir a data de vencimento e a quantidade disponível. Além disso, alerta quando um produto está próximo do vencimento. Tecnologias Utilizadas HTML5, CSS3, JavaScript (Vanilla) e LocalStorage para persistência de dados.
+      </p>
+      <a href="https://tatianakami.github.io/Controle-de-Produtos/" target="_blank">Ver Projeto</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="./assets/image/lista-de-tarefas.png" alt="logo" />
+      <h5>To-Do-List-APP</h5>
+      <p>
+        Sobre o Projeto O To-Do List App é uma aplicação web simples e interativa para ajudar os usuários a organizar suas tarefas diárias. Com uma interface intuitiva, permite adicionar, remover e marcar tarefas como concluídas.HTML5
+        CSS3,JavaScript(Vanilla JS).Adicionar novas tarefas, Marcar tarefas como concluídas, Remover tarefas da lista.
+      </p>
+      <a href="https://tatianakami.github.io/To-do-list-app//" target="_blank">Ver Projeto</a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="./assets/image/conversor-moeda.png" alt="logo" />
+      <h5>Conversor De Moedas</h5>
+      <p>
+        Um conversor de moedas simples e moderno, desenvolvido para facilitar a conversão entre diferentes moedas, como Dólar Americano (USD), Real Brasileiro (BRL) e Euro (EUR). Este projeto foi criado com foco em design responsivo e usabilidade, utilizando tecnologias atuais.
+      </p>
+      <a href="https://tatianakami.github.io/conversor-moedas///" target="_blank">Ver Projeto</a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="./assets/image/pr-image-3t.png" alt="logo" />
+      <h5>Buscador De CEP</h5>
+      <p>
+        Buscador de CEP é um projeto simples desenvolvido em React.js que permite a busca de endereços completos a partir do CEP (Código de Endereçamento Postal) no Brasil. 
+        Este projeto foi desenvolvido para melhorar as habilidades em React e foi hospedado no GitHub Pages para fácil acesso. 
+      </p>
+      <a href="https://tatianakami.github.io/buscador-cep/" target="_blank">Ver Projeto</a>
+    </div>
+  </div>
+</div>
+
+<footer id="fale-comigo">
+  <h5>Tatiana Kami</h5>
+  <p>Apaixonada por tecnologia, particularmente desenvolvimento Front-End, e atualmente em transição de carreira.</p>
+  <p>Para mais informações, entre em contato comigo:</p>
+  <div class="social">
+    <a href="https://www.linkedin.com/in/tatiana-kami//" target="_blank">
+      <img src="./assets/image/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="mailto:tatianakamioka@gmail.com">
+      <img src="./assets/image/o-email.png" alt="E-mail" />
+    </a>
+    <a href="https://github.com/Tatianakami" target="_blank">
+      <img src="./assets/image/github.png" alt="GitHub" />
+    </a>
+  </div>
+  <a href="./assets/curriculo/tatiana-kamioka.pdf" target="_blank" class="curriculo-link">Visualizar Currículo</a>
+  <p>Vamos Conversar!</p>
+</footer>
+
     <script>
-     // Função para abrir o menu lateral
-function abrirMenu() {
-  document.getElementById("menuLateral").classList.add("menu-aberto");
-}
+      // Função para abrir o menu lateral
+      function abrirMenu() {
+        document.getElementById("menuLateral").classList.add("menu-aberto");
+      }
 
-// Função para fechar o menu lateral
-function fecharMenu() {
-  document.getElementById("menuLateral").classList.remove("menu-aberto");
-}
+      // Função para fechar o menu lateral
+      function fecharMenu() {
+        document.getElementById("menuLateral").classList.remove("menu-aberto");
+      }
 
-// Fechar o menu ao clicar fora dele
-window.addEventListener("click", function (event) {
-  const menuLateral = document.getElementById("menuLateral");
-  const btnMenu = document.querySelector(".btn-menu");
+      // Fechar o menu ao clicar fora dele
+      window.addEventListener("click", function (event) {
+        const menuLateral = document.getElementById("menuLateral");
+        const btnMenu = document.querySelector(".btn-menu");
 
-  if (event.target !== btnMenu && !menuLateral.contains(event.target)) {
-    fecharMenu();
-  }
-});
+        if (event.target !== btnMenu && !menuLateral.contains(event.target)) {
+          fecharMenu();
+        }
+      });
 
-// Função para mostrar/ocultar o email de contato
-function mostrarEmail() {
-  const contato = document.getElementById("contato");
-  if (contato.style.display === "none" || contato.style.display === "") {
-    contato.style.display = "block";
-  } else {
-    contato.style.display = "none";
-  }
-}
+      // Função para mostrar/ocultar o email de contato
+      function mostrarEmail() {
+        const contato = document.getElementById("contato");
+        if (contato.style.display === "none" || contato.style.display === "") {
+          contato.style.display = "block";
+        } else {
+          contato.style.display = "none";
+        }
+      }
 
-// Função para abrir modais
-function abrirModal(id) {
-  document.getElementById(id).style.display = "block";
-}
+      // Função para alternar o tema
+      function alternarTema() {
+        const body = document.body;
+        body.classList.toggle("tema-claro");
 
-// Função para fechar modais
-function fecharModal(id) {
-  document.getElementById(id).style.display = "none";
-}
+        // Salvar preferência do tema no localStorage
+        if (body.classList.contains("tema-claro")) {
+          localStorage.setItem("tema", "claro");
+        } else {
+          localStorage.setItem("tema", "escuro");
+        }
+      }
 
-// Fechar modais ao clicar fora deles
-window.addEventListener("click", function (event) {
-  const modals = document.getElementsByClassName("modal");
-  Array.from(modals).forEach((modal) => {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  });
-});
+      // Carregar tema salvo ao iniciar a página
+      function carregarTema() {
+        const temaSalvo = localStorage.getItem("tema");
+        if (temaSalvo === "claro") {
+          document.body.classList.add("tema-claro");
+        }
+      }
 
-// Configuração do modal do currículo
-const curriculoModal = document.getElementById("curriculoModal");
-const openModalBtn = document.getElementById("openModal");
-const closeModalBtn = document.getElementById("closeModal");
+      // Botão "Voltar ao Topo"
+      const backToTopButton = document.getElementById('back-to-top');
 
-// Abrir o modal do currículo
-openModalBtn.onclick = function () {
-  curriculoModal.style.display = "block";
-};
+      if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 200) {
+            backToTopButton.classList.remove('hidden');
+            backToTopButton.style.opacity = '1';
+          } else {
+            backToTopButton.classList.add('hidden');
+            backToTopButton.style.opacity = '0';
+          }
+        });
 
-// Fechar o modal do currículo
-closeModalBtn.onclick = function () {
-  curriculoModal.style.display = "none";
-};
+        backToTopButton.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        });
+      }
+
+      // Scroll suave para links internos
+      const links = document.querySelectorAll('a[href^="#"]');
+
+      links.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const targetId = link.getAttribute('href').slice(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        });
+      });
+
+      // Inicializar
+      document.addEventListener("DOMContentLoaded", () => {
+        carregarTema(); // Carrega o tema salvo
+      });
     </script>
-    </body>
-    </html>
+  </body>
+</html>
